@@ -89,12 +89,158 @@ for i in 0..<starters.count{
 }
 
 // Optional
+var name:String = "Jay"
+var pet:String?
+pet = "Skippy"
 
+var present:String? = "Apple Watch"
 
+if let unwrappedPresent = present{
+    print("OMG THANK you for \(unwrappedPresent)")
+}
 
+var present2:String? = "Apple Watch 2"
+print("OMG the \(present2!)")
 
+var present3:String! = "Apple Watch 3"
+print("\(present3)")
+present3 = nil
+print("\(present3)")
 
+// Dictionaries
+var myDict2:[String: Int]
+var myDict3:[String: Int] = [String: Int]()
+var myDict4 = [String: Int]()
 
+var dictionary = [
+    "Kobe": 24,
+    "Lebron": 23,
+    "Rondo": 9
+]
+
+// var jerseyNumber = dictionary["Kobe"]!
+// print(jerseyNumber)
+
+if let jerseyNumber = dictionary["Kobe"]{
+    print(jerseyNumber)
+}
+
+print(dictionary)
+dictionary["Fisher"] = 2
+print(dictionary)
+
+dictionary["Lebron"] = nil
+print(dictionary)
+var lebronNumber = dictionary.removeValue(forKey: "Kobe")
+print(lebronNumber)
+
+if let lebronNumber = dictionary.removeValue(forKey: "Rondo"){
+    print(lebronNumber)
+}
+
+for (key, value) in dictionary{
+    print("The key \(key) and hte value is \(value)")
+}
+
+for x in dictionary{
+    print(x)
+}
+
+// Functions
+func sayHello(){
+    print("Hello how are you doing today")
+}
+sayHello()
+
+func sayHello(name: String){
+    print("Hello, \(name), how are you")
+}
+sayHello(name: "Minh")
+
+func printDescription(w: Int){
+    print("My width is \(w)")
+}
+printDescription(w: 10)
+
+func printDescription(w: Int, h:Int){
+    print("My width is \(w) and height is \(h)")
+}
+printDescription(w:2, h: 7)
+
+var myInt = 1
+func changeMyInt(someInt: Int){
+    var someInt = someInt
+    someInt += 1
+    print(someInt)
+}
+
+changeMyInt(someInt: myInt)
+print(myInt)
+
+func changeMyInt(someInt: inout Int){
+    someInt += 1
+    print(someInt)
+}
+
+changeMyInt(someInt: &myInt)
+print(myInt)
+
+func sayHello1(name:String = "buddy"){
+    print("Hey \(name)")
+}
+sayHello1()
+sayHello1(name: "MINH")
+
+func sayHello3(name: String = "buddy") -> String{
+    return "Hey \(name)"
+}
+var greeting: String?
+greeting = sayHello3()
+print(greeting!)
+
+func calculate(w: Int, andH h: Int) -> Int{
+    return w * h
+}
+var area = calculate(w: 10, andH: 3)
+print(area)
+
+func lookFor(dictionary: [String: Int], forKey key:String) -> Int?{
+    if let value = dictionary[key]{
+        return value
+    } else {
+        return nil
+    }
+}
+var jersay1 = ["MINH": 5]
+var jersay2 = lookFor(dictionary: jersay1, forKey: "MINH")
+
+if let num = jersay2{
+    print(num)
+}
+
+func findMin(arr: [Int]) -> Int?{
+    if arr.count > 0{
+        var min = arr[0]
+        for num in arr{
+            if num < min{
+                min = num
+            }
+        }
+        return min
+    } else {
+        return nil
+    }
+}
+
+func sayHello4(){
+    print("Hello")
+}
+sayHello4()
+
+func sayHello5() -> (){
+    print("Hello")
+}
+sayHello5()
 
 
 
