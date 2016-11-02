@@ -72,8 +72,8 @@ class ViewController: UIViewController {
         
         if sender.tag == 13 {
             
-            sender.minimumValue = 0.00
-            sender.maximumValue = 0.05
+            sender.minimumValue = 1
+            sender.maximumValue = 10
             
             let currentValue:Float = Float(sender.value)
             

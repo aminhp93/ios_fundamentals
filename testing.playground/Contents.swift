@@ -242,6 +242,9 @@ func sayHello5() -> (){
 }
 sayHello5()
 
+var wholeNumber = Int("27")
+var adsf = Double("asf")
+
 
 
 
