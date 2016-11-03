@@ -245,8 +245,9 @@ sayHello5()
 var wholeNumber = Int("27")
 var adsf = Double("asf")
 
-
-
+print("adsf".characters.count)
+"addasf".components(separatedBy: "")
+Array("asdfsfd".characters)
 
 
 
